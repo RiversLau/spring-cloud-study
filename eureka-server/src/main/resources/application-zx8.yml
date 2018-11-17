@@ -1,0 +1,14 @@
+spring:
+  profiles: zx8
+
+  application:
+    name: zx8
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: zx8
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
