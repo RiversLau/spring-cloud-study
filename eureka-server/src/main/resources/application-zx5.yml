@@ -1,15 +1,25 @@
 spring:
   profiles: zx5
-
   application:
     name: zx5
 
 server:
   port: 8761
 
+## 高可用配置
+#eureka:
+#  instance:
+#    hostname: zx5
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8762/eureka/
+
+## 单配置中心配置
 eureka:
   instance:
     hostname: zx5
   client:
     service-url:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: false
+    register-with-eureka: false
