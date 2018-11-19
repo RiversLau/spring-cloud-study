@@ -1,0 +1,19 @@
+server:
+  port: 8777
+
+spring:
+  application:
+    name: turbine-monitor
+
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: eureka-ribbon-client, eureka-feign-client
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix:
+    default: /hystrix.stream
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

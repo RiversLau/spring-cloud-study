@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author: Rivers
  * @date: 2018/11/17
  */
-@FeignClient(value = "eureka-client", configuration = FeignConfig.class)
+@FeignClient(value = "eureka-client", configuration = FeignConfig.class, fallback = HystrixFallback.class)
 public interface EurekaFeignClient {
 
     @GetMapping(value = "/hi")
