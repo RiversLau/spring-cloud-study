@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    config:
+      server:
+#        native:
+#          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/RiversLau/spring-cloud-config
+#          search-paths: /blob/master
+          username: account
+          password: password
+#      label: master
+#  profiles:
+#    active: native
+  application:
+    name: config-server
+
+  rabbitmq:
+    host: hostip
+    port: 5672
+    username: username
+    password: password
+
+server:
+  port: 5001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  security:
+    enabled: false

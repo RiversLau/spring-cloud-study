@@ -27,6 +27,7 @@
     <modules>
         <module>eureka-server</module>
         <module>eureka-client</module>
+        <module>config-study</module>
     </modules>
 
     <dependencyManagement>
